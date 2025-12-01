@@ -14,7 +14,7 @@ const HeaderBottom = () => {
 
   return (
     <header className="bg-[#262626] h-[78px] font-Lato text-[#ffffff] px-5">
-      <div className="max-w-[1260px] mx-auto h-full flex items-center align-center justify-between">
+      <div className="max-w-[1440px] mx-auto h-full flex items-center align-center justify-between">
         <div className="flex items-center cursor-pointer">
           <img src={categories} alt="categories" />
           <h2 className="text-xl font-bold ml-1">Categories</h2>
