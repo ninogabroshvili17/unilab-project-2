@@ -17,7 +17,7 @@ const Trending = () => {
   return (
     <>
       <section className="font-Lato px-5">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-3 pb-20 gap-5">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-3 gap-5">
           {trending.map((item) => {
             return (
               <div className="rounded-lg overflow-hidden" key={item.id}>

@@ -85,10 +85,9 @@ const FlashSales = () => {
                     <p className="text-[#555555] text-xs">{item.title}</p>
 
                     <div className="flex">
-                      <img src={star} alt="star" />
-                      <img src={star} alt="star" />
-                      <img src={star} alt="star" />
-                      <img src={star} alt="star" />
+                      {[...Array(4)].map((_, index) => (
+                        <img key={index} src={star} alt="star" />
+                      ))}
                       <span className="ml-1">({item.reviews})</span>
                     </div>
 
