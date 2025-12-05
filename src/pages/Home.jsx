@@ -7,7 +7,8 @@ import FlashSales from "../components/FlashSales.jsx";
 import Trending from "../components/Trending.jsx";
 import Top100Landing from "../components/Top100Landing.jsx";
 import ExploreLanding from "../components/ExploreLanding.jsx";
-import Magsafe  from "../components/Magsafe.jsx"; 
+import Magsafe from "../components/Magsafe.jsx";
+import ExploreLandingPt2 from "../components/ExploreLandingPt2.jsx";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Top100Landing />
       <ExploreLanding />
       <Magsafe />
+      <ExploreLandingPt2 />
     </>
   );
 };
