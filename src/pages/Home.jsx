@@ -6,6 +6,7 @@ import HeroBanner from "../components/HeroBanner.jsx";
 import FlashSales from "../components/FlashSales.jsx";
 import Trending from "../components/Trending.jsx";
 import Top100Landing from "../components/Top100Landing.jsx";
+import ExploreLanding from "../components/ExploreLanding.jsx";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <FlashSales />
       <Trending />
       <Top100Landing />
+      <ExploreLanding />
     </>
   );
 };
