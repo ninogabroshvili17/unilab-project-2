@@ -9,6 +9,7 @@ import Top100Landing from "../components/Top100Landing.jsx";
 import ExploreLanding from "../components/ExploreLanding.jsx";
 import Magsafe from "../components/Magsafe.jsx";
 import ExploreLandingPt2 from "../components/ExploreLandingPt2.jsx";
+import Footer from "../components/Footer.jsx";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <ExploreLanding />
       <Magsafe />
       <ExploreLandingPt2 />
+      <Footer />
     </>
   );
 };

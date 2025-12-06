@@ -5,7 +5,7 @@ import explore4 from "../assets/images/explore4.svg";
 const ExploreLanding = () => {
   return (
     <div className="font-Lato px-5">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-2 pb-[68px] text-white gap-5">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-2 text-white gap-5">
         <div className="grid grid-cols-2">
           <div className="w-full bg-[#D11FB5] px-5 flex flex-col justify-center">
             <h2 className="text-[36px] font-extrabold mb-4">
