@@ -20,7 +20,7 @@ const Magsafe = () => {
           </div>
           <img src={phones} alt="phones" className="w-[493px] h-[221px]" />
         </section>
-        <img src={slideright} alt="arrow left" className="cursor-pointer" />
+        <img src={slideRight} alt="arrow left" className="cursor-pointer" />
       </div>
     </div>
   );
