@@ -1,5 +1,5 @@
 import React from "react";
-import dropdownGray from "../../assets/icons/dropDownGray.svg";
+import dropdownGray from "../../assets/icons/dropdownGray.svg";
 
 const WomenSort = () => {
   return (
