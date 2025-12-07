@@ -1,6 +1,6 @@
 import React from "react";
-import explore1 from "../assets/images/explore1.svg";
-import explore2 from "../assets/images/explore2.svg";
+import explore1 from "../../assets/images/explore1.svg";
+import explore2 from "../../assets/images/explore2.svg";
 
 const ExploreLanding = () => {
   return (

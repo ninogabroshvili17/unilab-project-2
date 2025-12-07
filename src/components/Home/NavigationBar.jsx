@@ -1,7 +1,8 @@
 // src/components/NavigationBar.jsx
 import React, { useState } from "react";
-import { megaMenu } from "../data/megaMenuData";
+import { megaMenu } from "../../data/megaMenuData";
 import WomanMegaMenu from "./WomanMegaMenu";
+import { useNavigate } from "react-router-dom";
 
 const navItems = [
   "Woman",
@@ -19,6 +20,8 @@ const navItems = [
 const NavigationBar = () => {
   const [activeItem, setActiveItem] = useState(null); // "Woman" | null
 
+  const navigate = useNavigate();
+
   return (
     <nav
       className="font-Lato h-20 px-5 bg-white relative"
@@ -29,12 +32,17 @@ const NavigationBar = () => {
           <li
             key={item}
             className={`cursor-pointer text-sm text-[#555555] pb-2 
-              ${activeItem === item ? "text-[#FF7A00]" : ""}`}
+    ${activeItem === item ? "text-[#FF7A00]" : ""}`}
             onMouseEnter={() => {
               if (item === "Woman") {
                 setActiveItem("Woman");
               } else {
                 setActiveItem(null);
+              }
+            }}
+            onClick={() => {
+              if (item === "Woman") {
+                navigate("/women"); // REDIRECT TO PAGE
               }
             }}
           >

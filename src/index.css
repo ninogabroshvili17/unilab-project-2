@@ -4,3 +4,7 @@
 @theme {
   --font-Lato: "Lato", "sans-serif";
 }
+
+html {
+  overflow-y: scroll;
+}

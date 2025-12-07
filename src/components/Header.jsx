@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../assets/icons/logo.svg";
 import dropdownBlack from "../assets/icons/dropdownBlack.svg";
@@ -24,10 +25,15 @@ const categories = [
 const Header = () => {
   const [open, setOpen] = useState(false);
 
+  const navigate = useNavigate();
+
   return (
     <header className="font-Lato px-5">
       <div className="max-w-[1440px] flex justify-between items-center mx-auto  h-24">
-        <div className="flex items-center mr-7 cursor-pointer">
+        <div
+          className="flex items-center mr-7 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <img src={logo} alt="logo" className="w-[49px] h-[33px] mr-1.5" />
           <h1 className="text-[32px] font-bold">Luminae</h1>
         </div>

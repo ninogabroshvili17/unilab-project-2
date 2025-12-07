@@ -1,6 +1,6 @@
 import React from "react";
-import bannerLeftImg from "../assets/images/bannerLeftImg.svg";
-import shopNow from "../assets/icons/shopNow.svg";
+import bannerLeftImg from "../../assets/images/bannerLeftImg.svg";
+import shopNow from "../../assets/icons/shopNow.svg";
 
 const HeroBanner = () => {
   return (
