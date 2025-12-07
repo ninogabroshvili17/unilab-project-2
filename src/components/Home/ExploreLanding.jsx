@@ -1,39 +1,41 @@
 import React from "react";
-import explore3 from "../assets/images/explore3.svg";
-import explore4 from "../assets/images/explore4.svg";
+import explore1 from "../../assets/images/explore1.svg";
+import explore2 from "../../assets/images/explore2.svg";
 
 const ExploreLanding = () => {
   return (
     <div className="font-Lato px-5">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-2 text-white gap-5">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-2 pb-[68px] text-white gap-5">
         <div className="grid grid-cols-2">
-          <div className="w-full bg-[#D11FB5] px-5 flex flex-col justify-center">
+          <div className="w-full bg-[#BF2E3B] px-5 flex flex-col justify-center">
             <h2 className="text-[36px] font-extrabold mb-4">
-              The Pinky Barbie Edition
+              Never-Ending Summer
             </h2>
-            <h4 className="text-[28px] mb-[31px]">Lets play dress up</h4>
+            <h4 className="text-[28px] mb-[31px]">
+              Throwback Shirts & all-day dressed
+            </h4>
             <p className="text-[20px] underline cursor-pointer">
               Exlopre all category
             </p>
           </div>
           <img
-            src={explore3}
+            src={explore1}
             alt="dress"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="grid grid-cols-2">
-          <div className="w-full bg-[#0186C4] px-5 flex flex-col justify-center">
+          <div className="w-full bg-[#1D5159] px-5 flex flex-col justify-center">
             <h2 className="text-[36px] font-extrabold mb-4">
-              Best Sellers Everyone Love
+              The most famous sport brands
             </h2>
-            <h4 className="text-[28px] mb-[31px]">poolside glam include</h4>
+            <h4 className="text-[28px] mb-[31px]">Get in gym essentials</h4>
             <p className="text-[20px] underline cursor-pointer">
               Exlopre all category
             </p>
           </div>
           <img
-            src={explore4}
+            src={explore2}
             alt="gym"
             className="w-full h-full object-cover"
           />

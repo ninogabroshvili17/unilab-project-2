@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import arrowRight from "../assets/icons/arrowRight.svg";
-import blackFavorites from "../assets/icons/blackFavorites.svg";
-import star from "../assets/icons/star.svg";
+import arrowRight from "../../assets/icons/arrowRight.svg";
+import blackFavorites from "../../assets/icons/blackFavorites.svg";
+import star from "../../assets/icons/star.svg";
 
 const Top100Landing = () => {
   const [top100, setTop100] = useState([]);

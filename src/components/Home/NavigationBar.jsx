@@ -1,6 +1,6 @@
 // src/components/NavigationBar.jsx
 import React, { useState } from "react";
-import { megaMenu } from "../data/megaMenuData";
+import { megaMenu } from "../../data/megaMenuData";
 import WomanMegaMenu from "./WomanMegaMenu";
 import { useNavigate } from "react-router-dom";
 

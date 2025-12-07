@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import React from "react";
-import arrowRight from "../assets/icons/arrowRight.svg";
-import star from "../assets/icons/star.svg";
+import arrowRight from "../../assets/icons/arrowRight.svg";
+import star from "../../assets/icons/star.svg";
 
 const FlashSales = () => {
   const [products, setProducts] = useState([]);
