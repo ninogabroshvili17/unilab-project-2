@@ -1,5 +1,6 @@
 // src/components/ProductCard.jsx
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // <-- ADD THIS
 import star from "../assets/icons/star.svg";
 import emptyStar from "../assets/icons/emptyStar.svg";
 import blackFavorites from "../assets/icons/blackFavorites.svg";
@@ -7,20 +8,25 @@ import redFavorites from "../assets/icons/redFavorites.svg";
 
 const ProductCard = ({ item }) => {
   const [favorite, setFavorite] = useState(false);
+  const navigate = useNavigate(); // <-- ADD THIS
 
   return (
     <div className="rounded-xl shadow-[0_0_12px_0_rgba(0,0,0,0.1)] bg-white">
-      {/* IMAGE */}
+      {/* IMAGE — CLICK TO OPEN DETAILS */}
       <img
         src={item.image}
         alt={item.title}
         className="cursor-pointer rounded-t-xl"
+        onClick={() => navigate(`/product/${item.id}`)}
       />
 
       <div className="p-5 flex flex-col gap-3">
         {/* TOP ROW */}
         <div className="flex justify-between items-center">
-          <div>
+          <div
+            onClick={() => navigate(`/product/${item.id}`)} // <-- MAKE TITLE CLICKABLE TOO
+            className="cursor-pointer"
+          >
             <h6 className="text-sm text-[#262626] font-bold mb-1">
               {item.brand}
             </h6>
@@ -37,7 +43,10 @@ const ProductCard = ({ item }) => {
         </div>
 
         {/* RATING */}
-        <div className="flex items-center">
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => navigate(`/product/${item.id}`)} // optional: clickable
+        >
           {[1, 2, 3, 4, 5].map((num) => (
             <img
               key={num}
@@ -46,12 +55,14 @@ const ProductCard = ({ item }) => {
               className="w-6 h-6"
             />
           ))}
-
           <span className="text-xs text-[#555555] ml-3">({item.reviews})</span>
         </div>
 
         {/* PRICE */}
-        <div className="flex items-center gap-3">
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => navigate(`/product/${item.id}`)}
+        >
           <p className="text-[#FF2E00] text-sm font-extrabold">${item.price}</p>
           <p className="text-[#9D9D9D] line-through text-sm">
             ${item.oldPrice}

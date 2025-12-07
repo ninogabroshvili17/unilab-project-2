@@ -1,17 +1,19 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import WomenClothes from "./pages/WomenClothes";
-import NavigationBar from "./components/Home/NavigationBar.jsx";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/women" element={<WomenClothes />} />
+
+        {/* NEW PRODUCT PAGE */}
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
