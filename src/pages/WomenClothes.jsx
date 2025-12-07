@@ -4,6 +4,7 @@ import HeaderBottom from "../components/HeaderBottom.jsx";
 import Direction from "../components/WomanClothes/Direction.jsx";
 import WomenSort from "../components/WomanClothes/WomenSort.jsx";
 import WomenClothesMain from "../components/WomanClothes/WomenClothesMain.jsx";
+import Footer from "../components/Footer.jsx";
 
 const WomenClothes = () => {
   return (
@@ -13,6 +14,7 @@ const WomenClothes = () => {
       <Direction />
       <WomenSort />
       <WomenClothesMain />
+      <Footer showNewsletter={false} />
     </>
   );
 };
