@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import FilterSection from "./FilterSection";
 import { filterData } from "../../data/filterData";
 import filterCategories from "../../assets/icons/filterCategories.svg";
 import searchGray from "../../assets/icons/searchGray.svg";
 import CustomCheckbox from "./CustomCheckbox.jsx";
+import ColorOption from "./ColorOption";
 
 const Filter = () => {
+  const [selectedColors, setSelectedColors] = useState([]);
+
+  const handleColorSelect = (color) => {
+    if (selectedColors.includes(color)) {
+      setSelectedColors(selectedColors.filter((c) => c !== color)); // remove
+    } else {
+      setSelectedColors([...selectedColors, color]); // add
+    }
+  };
+
   return (
     <aside className="w-[213px]">
       <div className="flex items-center gap-4 mb-[38px]">
@@ -46,11 +57,12 @@ const Filter = () => {
       <FilterSection title={filterData.colors.title}>
         <div className="grid grid-cols-6 gap-[13px] mb-7">
           {filterData.colors.items.map((color) => (
-            <div
+            <ColorOption
               key={color}
-              className="w-[25px] h-[25px] rounded-full cursor-pointer border-none"
-              style={{ backgroundColor: color }}
-            ></div>
+              color={color}
+              selected={selectedColors.includes(color)}
+              onSelect={handleColorSelect}
+            />
           ))}
         </div>
       </FilterSection>
