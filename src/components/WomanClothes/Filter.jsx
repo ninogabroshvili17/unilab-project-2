@@ -8,12 +8,21 @@ import ColorOption from "./ColorOption";
 
 const Filter = () => {
   const [selectedColors, setSelectedColors] = useState([]);
+  const [selectedSizes, setSelectedSizes] = useState([]);
 
   const handleColorSelect = (color) => {
     if (selectedColors.includes(color)) {
       setSelectedColors(selectedColors.filter((c) => c !== color)); // remove
     } else {
       setSelectedColors([...selectedColors, color]); // add
+    }
+  };
+
+  const toggleSize = (size) => {
+    if (selectedSizes.includes(size)) {
+      setSelectedSizes(selectedSizes.filter((s) => s !== size)); // unselect
+    } else {
+      setSelectedSizes([...selectedSizes, size]); // select
     }
   };
 
@@ -68,16 +77,30 @@ const Filter = () => {
       </FilterSection>
 
       {/* Size */}
+      {/* Size */}
       <FilterSection title={filterData.size.title}>
         <div className="grid grid-cols-4 gap-[5px] mb-7">
-          {filterData.size.items.map((size) => (
-            <span
-              key={size}
-              className="text-center py-[5px] text-sm text-[#555555] font-bold border rounded border-[#D9D9D9] cursor-pointer bg-white"
-            >
-              {size}
-            </span>
-          ))}
+          {filterData.size.items.map((size) => {
+            const isActive = selectedSizes.includes(size);
+
+            return (
+              <span
+                key={size}
+                onClick={() => toggleSize(size)}
+                className={`
+            text-center py-[5px] text-sm font-bold cursor-pointer rounded border transition
+
+            ${
+              isActive
+                ? "bg-[#D1E2EB] border-[#D1E2EB] text-[#262626]"
+                : "bg-white border-[#D9D9D9] text-[#555555]"
+            }
+          `}
+              >
+                {size}
+              </span>
+            );
+          })}
         </div>
       </FilterSection>
 
