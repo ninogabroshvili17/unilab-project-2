@@ -4,7 +4,7 @@ import axios from "axios";
 import Direction from "./Direction";
 import like from "../../assets/icons/like.svg";
 import basket from "../../assets/icons/basket.svg";
-import dropdownBlack from "../../assets/icons/dropdownBlack";
+import dropdownBlack from "../../assets/icons/dropdownBlack.svg";
 import Minus from "../../assets/icons/Minus.svg";
 import Plus from "../../assets/icons/Plus.svg";
 import add from "../../assets/icons/add.svg";
