@@ -8,37 +8,40 @@ import instagramBlack from "../assets/icons/instagramBlack.svg";
 import facebookBlack from "../assets/icons/facebookBlack.svg";
 import telegramBlack from "../assets/icons/telegramBlack.svg";
 
-const Footer = () => {
+const Footer = ({ showNewsletter = true }) => {
   return (
-    <div className="font-Lato bg-[#D1E2EB] w-full mt-[155px]">
+    <div className="font-Lato bg-[#D1E2EB] w-full">
       <div className="max-w-[1440px] mx-auto pt-[132px] pb-20 px-5 relative">
-        <section
-          className="bg-[#7296AB] w-[571px] h-[187px] rounded-lg flex flex-col 
-        items-center justify-center gap-[23px] text-center absolute left-1/2 
-        -translate-x-1/2 top-0 -mt-[90px] px-3 py-2"
-        >
-          <h2 className="text-[32px] font-bold text-white leading-none">
-            Luminae <span className="text-[#D1E2EB]">Store</span>
-          </h2>
+        {showNewsletter && (
+          <section
+            className="bg-[#7296AB] w-[571px] h-[187px] rounded-lg flex flex-col 
+      items-center justify-center gap-[23px] text-center absolute left-1/2 
+      -translate-x-1/2 top-0 -mt-[90px] px-3 py-2"
+          >
+            <h2 className="text-[32px] font-bold text-white leading-none">
+              Luminae <span className="text-[#D1E2EB]">Store</span>
+            </h2>
 
-          <p className="text-white">
-            Register your email not to miss the last minutes off + Free delivery
-          </p>
+            <p className="text-white">
+              Register your email not to miss the last minutes off + Free
+              delivery
+            </p>
 
-          <div className="relative w-[268px]">
-            <input
-              type="text"
-              placeholder="Enter your email"
-              className="w-full h-9 rounded px-3 pr-12 outline-none border border-white/40 
-              placeholder:text-[#9D9D9D] placeholder:text-sm bg-white"
-            />
-            <img
-              src={arrowIcon}
-              alt="send"
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 cursor-pointer"
-            />
-          </div>
-        </section>
+            <div className="relative w-[268px]">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                className="w-full h-9 rounded px-3 pr-12 outline-none border border-white/40 
+        placeholder:text-[#9D9D9D] placeholder:text-sm bg-white"
+              />
+              <img
+                src={arrowIcon}
+                alt="send"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 cursor-pointer"
+              />
+            </div>
+          </section>
+        )}
 
         <footer className="flex mx-auto justify-between w-[889px]">
           <ul className="flex flex-col gap-[15px]">
