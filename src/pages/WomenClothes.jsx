@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../components/Header.jsx";
 import HeaderBottom from "../components/HeaderBottom.jsx";
-import Direction from "../components/WomanClothes/Direction.jsx"
+import Direction from "../components/WomanClothes/Direction.jsx";
+import WomenSort from "../components/WomanClothes/WomenSort.jsx";
 
 const WomenClothes = () => {
   return (
@@ -9,6 +10,7 @@ const WomenClothes = () => {
       <Header />
       <HeaderBottom />
       <Direction />
+      <WomenSort />
     </>
   );
 };
