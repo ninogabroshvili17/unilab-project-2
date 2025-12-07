@@ -3,6 +3,7 @@ import FilterSection from "./FilterSection";
 import { filterData } from "../../data/filterData";
 import filterCategories from "../../assets/icons/filterCategories.svg";
 import searchGray from "../../assets/icons/searchGray.svg";
+import CustomCheckbox from "./CustomCheckbox.jsx";
 
 const Filter = () => {
   return (
@@ -37,13 +38,7 @@ const Filter = () => {
       {/* Style */}
       <FilterSection title={filterData.style.title}>
         {filterData.style.items.map((s) => (
-          <label
-            key={s}
-            className="flex items-center gap-2.5 text-sm text-[#555] mb-4 cursor-pointer"
-          >
-            <input type="checkbox" className="accent-[#4172DC]" />
-            {s}
-          </label>
+          <CustomCheckbox key={s} label={s} />
         ))}
       </FilterSection>
 
