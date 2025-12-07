@@ -4,7 +4,7 @@ import axios from "axios";
 import Direction from "./Direction";
 import like from "../../assets/icons/like.svg";
 import basket from "../../assets/icons/basket.svg";
-import dropdown from "../../assets/icons/dropdownBlack";
+import dropdownBlack from "../../assets/icons/dropdownBlack";
 import Minus from "../../assets/icons/Minus.svg";
 import Plus from "../../assets/icons/Plus.svg";
 import add from "../../assets/icons/add.svg";
@@ -92,8 +92,8 @@ const ProductDetailsCard = () => {
                 <p className="text-sm text-[#262626] font-medium flex items-center gap-1">
                   Free Shipping to Victoria territory
                   <img
-                    src={dropdown}
-                    alt="dropdown"
+                    src={dropdownBlack}
+                    alt="dropdownBlack"
                     className="w-[9px] h-[5px]"
                   />
                 </p>
