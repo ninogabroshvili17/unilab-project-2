@@ -8,11 +8,13 @@ import dropdown from "../../assets/icons/dropDownBlack.svg";
 import Minus from "../../assets/icons/Minus.svg";
 import Plus from "../../assets/icons/Plus.svg";
 import add from "../../assets/icons/add.svg";
+import { useCart } from "../../context/CartContext";
 
 const ProductDetailsCard = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     axios
@@ -154,7 +156,10 @@ const ProductDetailsCard = () => {
                 SHOP NOW
               </button>
 
-              <button className="flex items-center justify-center text-[#555555] gap-2 px-10 py-3 h-14 border border-[#434343] rounded-md cursor-pointer">
+              <button
+                onClick={() => addToCart(product, quantity)}
+                className="flex items-center justify-center text-[#555555] gap-2 px-10 py-3 h-14 border border-[#434343] rounded-md cursor-pointer"
+              >
                 <img src={basket} alt="basket" className="w-5" />
                 ADD TO BASKET
               </button>
