@@ -79,7 +79,7 @@ const Filter = () => {
 
       {/* Size */}
       <FilterSection title={filterData.size.title}>
-        <div className="grid grid-cols-4 gap-[5px] mb-7">
+        <div className="grid grid-cols-4 gap-y-2 gap-x-[5px] mb-7">
           {filterData.size.items.map((size) => {
             const isActive = selectedSizes.includes(size);
 
