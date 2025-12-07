@@ -113,7 +113,11 @@ const Footer = ({ showNewsletter = true }) => {
 
           <div className="flex items-center gap-2 cursor-pointer">
             <span className="text-sm text-[#262626]">English</span>
-            <img src={dropdownBlack} alt="dropdown" className="w-2.5 h-2.5" />
+            <img
+              src={dropdownBlack}
+              alt="dropdownBlack"
+              className="w-2.5 h-2.5"
+            />
           </div>
         </div>
         <div className="max-w-[1440px] mx-auto flex justify-between pt-[35px] pb-[47px] items-center">
