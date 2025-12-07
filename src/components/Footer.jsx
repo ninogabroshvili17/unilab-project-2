@@ -3,7 +3,7 @@ import arrowIcon from "../assets/icons/arrowIcon.svg";
 import visa from "../assets/icons/visa.svg";
 import mastercard from "../assets/icons/mastercard.svg";
 import paypal from "../assets/icons/paypal.svg";
-import dropDownBlack from "../assets/icons/dropDownBlack.svg";
+import dropdownBlack from "../assets/icons/dropdownBlack.svg";
 import instagramBlack from "../assets/icons/instagramBlack.svg";
 import facebookBlack from "../assets/icons/facebookBlack.svg";
 import telegramBlack from "../assets/icons/telegramBlack.svg";
@@ -113,7 +113,7 @@ const Footer = ({ showNewsletter = true }) => {
 
           <div className="flex items-center gap-2 cursor-pointer">
             <span className="text-sm text-[#262626]">English</span>
-            <img src={dropDownBlack} alt="dropdown" className="w-2.5 h-2.5" />
+            <img src={dropdownBlack} alt="dropdown" className="w-2.5 h-2.5" />
           </div>
         </div>
         <div className="max-w-[1440px] mx-auto flex justify-between pt-[35px] pb-[47px] items-center">
