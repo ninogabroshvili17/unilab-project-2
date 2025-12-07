@@ -1,6 +1,6 @@
 import React from "react";
 import slideLeft from "../../assets/icons/slideLeft.svg";
-import slideright from "../../assets/icons/slideright.svg";
+import slideRight from "../../assets/icons/slideRight.svg";
 import phones from "../../assets/images/phones.svg";
 
 const Magsafe = () => {
