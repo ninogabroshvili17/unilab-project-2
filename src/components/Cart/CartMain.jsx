@@ -4,16 +4,18 @@ import Plus from "../../assets/icons/Plus.svg";
 import trash from "../../assets/icons/trash.svg";
 
 const CartPage = () => {
+  //access cart state + quantity/update
   const { cart, increaseQuantity, decreaseQuantity, removeItem } = useCart();
 
+  //total per render
   const total = cart
     .reduce((sum, item) => sum + item.price * item.quantity, 0)
     .toFixed(2);
 
   return (
     <div className="font-Lato px-5 mb-10">
-      <div className="max-w-[1440px] mx-auto ">
-        {/* TOP NAV */}
+      <div className="max-w-[1440px] mx-auto">
+        {/* navigation */}
         <div className="flex gap-16 justify-center text-sm font-bold text-[#9D9D9D] border-b border-[#D9D9D9] uppercase pt-10">
           <span className="text-[#262626] pb-4 cursor-pointer">
             Card({cart.length})
@@ -23,9 +25,9 @@ const CartPage = () => {
           <span className="cursor-pointer">Product Confirmation</span>
         </div>
 
-        {/* MAIN GRID LAYOUT */}
+        {/* main layout: products and summary */}
         <div className="grid grid-cols-[1fr_309px] gap-10 py-10">
-          {/* LEFT COLUMN */}
+          {/* LEFT: Product list */}
           <div>
             <h2 className="text-[20px] font-bold mb-8 text-[#262626]">
               Card {cart.length}
@@ -36,7 +38,7 @@ const CartPage = () => {
                 key={item.id}
                 className="grid grid-cols-[1fr_80px_110px_80px_30px] items-center border-b py-6 gap-6"
               >
-                {/* IMAGE + INFO */}
+                {/* product preview section */}
                 <div className="flex items-center gap-5">
                   <img
                     src={item.image}
@@ -46,6 +48,8 @@ const CartPage = () => {
 
                   <div>
                     <p className="text-[16px] font-bold mb-1">{item.title}</p>
+
+                    {/* color indicator dot */}
                     <p className="text-sm text-[#555] flex items-center gap-1">
                       <span className="font-semibold">Color:</span>
                       <span
@@ -56,12 +60,11 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                {/* PRICE */}
+                {/* price per item */}
                 <p className="font-medium text-[16px] text-right">
                   ${item.price}
                 </p>
 
-                {/* QUANTITY */}
                 <div className="flex items-center border rounded px-3 py-2 gap-4 justify-center">
                   <button
                     className="cursor-pointer"
@@ -82,12 +85,12 @@ const CartPage = () => {
                   </button>
                 </div>
 
-                {/* ITEM TOTAL */}
+                {/* price x quantity */}
                 <p className="font-medium text-[16px] text-right">
                   ${(item.price * item.quantity).toFixed(2)}
                 </p>
 
-                {/* TRASH */}
+                {/* remove item */}
                 <img
                   src={trash}
                   className="w-5 cursor-pointer mx-auto"
@@ -98,10 +101,11 @@ const CartPage = () => {
             ))}
           </div>
 
-          {/* RIGHT SIDEBAR */}
+          {/* orrder*/}
           <div className="bg-[#F5F5F5] p-6 rounded-lg h-fit">
             <h3 className="text-[20px] font-bold mb-5">Order Summary</h3>
 
+            {/* Summary rows */}
             <div className="flex justify-between mb-3 text-sm">
               <p className="text-[#555]">Price</p>
               <p className="font-medium">${total}</p>
@@ -122,13 +126,14 @@ const CartPage = () => {
               <p className="font-medium">$47.10</p>
             </div>
 
-            {/* GIFT BOX */}
+            {/* gift */}
             <div className="flex items-center mb-5 gap-2">
               <input type="checkbox" className="w-4 h-4" defaultChecked />
               <label className="text-sm font-medium">Pack in a Gift Box</label>
               <span className="ml-auto font-medium">$10.90</span>
             </div>
 
+            {/* total */}
             <div className="flex justify-between mb-6 text-[18px] font-bold">
               <p>Total Price</p>
               <p>${(parseFloat(total) + 10.9).toFixed(2)}</p>
@@ -141,7 +146,7 @@ const CartPage = () => {
         </div>
       </div>
 
-      {/* APPLY CODE */}
+      {/* discount */}
       <div className="max-w-[1440px] mx-auto mt-5 flex items-center gap-4 justify-end pr-10">
         <input
           type="text"

@@ -46,3 +46,5 @@ const ExploreLanding = () => {
 };
 
 export default ExploreLanding;
+
+// i could have taken these epxlore card as seperate components as well 

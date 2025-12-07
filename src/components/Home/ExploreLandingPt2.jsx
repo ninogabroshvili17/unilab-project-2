@@ -44,3 +44,5 @@ const ExploreLanding = () => {
 };
 
 export default ExploreLanding;
+
+// here as well coulldve done it as seperate component cards but i didnt and its all bloated now. also used svg s for the best quality lol

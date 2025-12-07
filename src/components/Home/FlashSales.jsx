@@ -31,6 +31,8 @@ const FlashSales = () => {
     return { hours, mins, secs };
   };
 
+  // timer doesnt work wanted to do it at the end but got no time 
+
   return (
     <section className="font-Lato px-5">
       <div className="max-w-[1440px] mx-auto">
