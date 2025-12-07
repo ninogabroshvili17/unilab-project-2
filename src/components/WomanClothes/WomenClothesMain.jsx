@@ -6,10 +6,10 @@ const WomenClothesMain = () => {
   return (
     <div className="font-Lato px-5 pt-[53px]">
       <section className="max-w-[1440px] mx-auto grid grid-cols-[263px_1fr]">
-        <div className="bg-red-300">
+        <div>
           <Filter />
         </div>
-        <div className="bg-blue-300 pt-[27px] pl-[88px] pb-[75px]">
+        <div className="pt-[27px] pl-[88px] pb-[75px]">
           <WomenProducts />
         </div>
       </section>
