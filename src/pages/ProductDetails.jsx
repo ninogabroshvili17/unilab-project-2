@@ -3,6 +3,7 @@ import Header from "../components/Header.jsx";
 import HeaderBottom from "../components/HeaderBottom.jsx";
 import ProductDetailsCard from "../components/WomanClothes/ProductDetailsCard.jsx";
 import ProductDescription from "../components/WomanClothes/ProductDescription.jsx";
+import Footer from "../components/Footer.jsx";
 
 const ProductDetails = () => {
   return (
@@ -11,6 +12,7 @@ const ProductDetails = () => {
       <HeaderBottom />
       <ProductDetailsCard />
       <ProductDescription />
+      <Footer showNewsletter={false} />
     </>
   );
 };

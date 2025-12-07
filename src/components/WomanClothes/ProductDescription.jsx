@@ -3,7 +3,7 @@ import React from "react";
 const ProductDetailsInfo = () => {
   return (
     <div className="font-Lato px-5 mt-10">
-      <div className="max-w-[1440px] mx-auto pb-40">
+      <div className="max-w-[1440px] mx-auto pb-12">
         {/* TOP TABS */}
         <div className="flex gap-16 justify-center text-sm font-bold text-[#9D9D9D] border-b border-[#D9D9D9]">
           <span className="text-[#262626] pb-4 cursor-pointer">
