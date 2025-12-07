@@ -24,7 +24,7 @@ const Home = () => {
       <ExploreLanding />
       <Magsafe />
       <ExploreLandingPt2 />
-      <Footer />
+      <Footer showNewsletter={true} />
     </>
   );
 };
