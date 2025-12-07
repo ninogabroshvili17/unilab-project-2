@@ -5,6 +5,7 @@ import filterCategories from "../../assets/icons/filterCategories.svg";
 import searchGray from "../../assets/icons/searchGray.svg";
 import CustomCheckbox from "./CustomCheckbox.jsx";
 import ColorOption from "./ColorOption";
+import PriceSlider from "./PriceSlider.jsx";
 
 const Filter = () => {
   const [selectedColors, setSelectedColors] = useState([]);
@@ -77,7 +78,6 @@ const Filter = () => {
       </FilterSection>
 
       {/* Size */}
-      {/* Size */}
       <FilterSection title={filterData.size.title}>
         <div className="grid grid-cols-4 gap-[5px] mb-7">
           {filterData.size.items.map((size) => {
@@ -105,21 +105,11 @@ const Filter = () => {
       </FilterSection>
 
       {/* Price */}
-      <FilterSection title="PRICE">
-        <div className="flex gap-2 mb-3">
-          <input
-            type="number"
-            className="border text-xs px-2 py-1 rounded w-20"
-            placeholder="$ 60"
-          />
-          <input
-            type="number"
-            className="border text-xs px-2 py-1 rounded w-20"
-            placeholder="$ 450"
-          />
-        </div>
-        <input type="range" className="w-full" />
+      <FilterSection title="PRICE" noBorder>
+        <PriceSlider />
       </FilterSection>
+
+      <p className="text-[#555555] text-sm">878 products found</p>
     </aside>
   );
 };

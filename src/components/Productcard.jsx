@@ -47,16 +47,12 @@ const ProductCard = ({ item }) => {
             />
           ))}
 
-          <span className="text-xs text-[#555555] ml-3">
-            ({item.reviews})
-          </span>
+          <span className="text-xs text-[#555555] ml-3">({item.reviews})</span>
         </div>
 
         {/* PRICE */}
         <div className="flex items-center gap-3">
-          <p className="text-[#FF2E00] text-sm font-extrabold">
-            ${item.price}
-          </p>
+          <p className="text-[#FF2E00] text-sm font-extrabold">${item.price}</p>
           <p className="text-[#9D9D9D] line-through text-sm">
             ${item.oldPrice}
           </p>
